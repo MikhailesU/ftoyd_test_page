@@ -35,11 +35,11 @@ export default function MatchList() {
 
   const fetchMatches = async () => {
     try {
+      setLoading(true)
       const response = await fetch('https://app.ftoyd.com/fronttemp-service/fronttemp');
       if (!response.ok) {
         setError(true);
       }
-      setLoading(true)
       const data: {
         data: {
           matches: Match[];

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function useScreenSize(sizes: number[]) {
     const [size, setSize] = useState({ width: 0, height: 0 })
-    
+
     const SetProcess = () => {
         setSize({
             width: window.innerWidth,
