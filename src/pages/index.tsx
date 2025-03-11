@@ -1,20 +1,13 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import useScreenSize from '@/useScreenSize';
+import MatchList from '../components/MatchList';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+   const Home: React.FC = () => {
+    useScreenSize([1920])
+     return (
+       <div>
+         <MatchList />
+       </div>
+     );
+   };
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export default function Home() {
-  return (
-    <div>
-      <h1>hello world!</h1>
-    </div>
-  );
-}
+   export default Home;

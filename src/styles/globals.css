@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #06080C;
+  padding: calc(20px * var(--screen-factor));
+  color: #FFFFFF;
+  text-align: center
+}
+
+button {
+  display: flex;
+  background-color: #EB0237;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  gap: calc(10px * var(--screen-factor));
+  padding: calc(15px * var(--screen-factor));
+  color: #ffff;
+  cursor: pointer;
+  transition: 0.5s opacity linear;
+  font-size: calc(18px * var(--screen-factor));
+}
+
+button>img{
+  width: calc(25px * var(--screen-factor));
+  height: calc(25px * var(--screen-factor));
+}
+
+.error{
+  background-color: #0F1318;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(5px * var(--screen-factor));
+  padding: calc(10px * var(--screen-factor));
+  font-size: calc(18px * var(--screen-factor));
+  border-radius: 5px;
+}
+
+.error>img{
+  width: calc(20px * var(--screen-factor));
+  height: calc(20px * var(--screen-factor));
+}
+
+.status{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(10px * var(--screen-factor));
+  padding: calc(10px * var(--screen-factor));
+  margin: calc(10px * var(--screen-factor));
+  border-radius: 5px;
+  width: calc(150px * var(--screen-factor));
+  height: calc(50px * var(--screen-factor));
+  font-size: calc(16px * var(--screen-factor));
+}
+
+@font-face {
+  font-family: 'TacticSans';
+  src: url('../exotic_fonts/TacticSans-BldIt.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
 }
