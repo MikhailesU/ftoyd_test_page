@@ -10,7 +10,6 @@ body {
 
 button {
   display: flex;
-  background-color: #EB0237;
   outline: none;
   border: none;
   border-radius: 5px;
@@ -18,15 +17,9 @@ button {
   justify-content: center;
   gap: calc(10px * var(--screen-factor));
   padding: calc(15px * var(--screen-factor));
-  color: #ffff;
   cursor: pointer;
-  transition: 0.5s opacity linear;
+  transition: 0.5s opacity background-color linear;
   font-size: calc(18px * var(--screen-factor));
-}
-
-button>img{
-  width: calc(25px * var(--screen-factor));
-  height: calc(25px * var(--screen-factor));
 }
 
 .error{
@@ -39,11 +32,6 @@ button>img{
   padding: calc(10px * var(--screen-factor));
   font-size: calc(18px * var(--screen-factor));
   border-radius: 5px;
-}
-
-.error>img{
-  width: calc(20px * var(--screen-factor));
-  height: calc(20px * var(--screen-factor));
 }
 
 .status{
@@ -64,4 +52,14 @@ button>img{
   src: url('../exotic_fonts/TacticSans-BldIt.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
+}
+
+@keyframes spin {
+  0%, 100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.spinning {
+  animation: spin 0.5s linear reverse infinite;
 }
